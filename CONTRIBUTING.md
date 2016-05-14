@@ -65,7 +65,12 @@ Making Changes
   + Only use spaces for indentation.
   + Create minimal diffs - disable on save actions like reformat source code or organize imports. If you feel the source code should be reformatted create a separate PR for this change.
   + Check for unnecessary whitespace with git diff --check before committing.
++ Make all of your commits on a branch named to reflect a JIRA issue prefexed with the type of issue. For example branch names should look like:
+  + `improvement-MATH-852`
+  + `bug-MATH-1329`
+  + `feature-MATH-621`
 + Make sure your commit messages are in the proper format. Your commit message should contain the key of the JIRA issue.
+  + For example, a commit message might look like `MATH-852: Adding documentation for development`
 + Make sure you have added the necessary tests for your changes.
 + Run all the tests with `mvn clean verify` to assure nothing else was accidentally broken.
 
