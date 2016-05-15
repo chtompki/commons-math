@@ -1422,6 +1422,25 @@ public class FastMath {
         }
     }
 
+    /**
+     * Computes log(1 + x)/x.
+     *
+     * @param x Number.
+     * @return {@code log(1 + x)/x}.
+     */
+    public static double log1pc(final double x) {
+        if (x == -1) {
+            return Double.POSITIVE_INFINITY;
+        } else if (x == Double.POSITIVE_INFINITY) {
+            return 0d;
+        } else if (x < -1) {
+            return Double.NaN;
+        } else if (x == 0) {
+            return 1d;
+        }
+        return log1p(x)/x;
+    }
+
     /** Compute the base 10 logarithm.
      * @param x a number
      * @return log10(x)

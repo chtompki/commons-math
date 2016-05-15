@@ -330,6 +330,11 @@ public class FastMathTest {
     }
 
     @Test
+    public void testLog1pc() {
+        System.out.println(FastMath.log1pc(0d));
+    }
+
+    @Test
     public void testLogSpecialCases() {
 
         Assert.assertEquals("Log of zero should be -Inf", Double.NEGATIVE_INFINITY, FastMath.log(0.0), 1.0);
