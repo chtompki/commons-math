@@ -313,6 +313,14 @@ public abstract class ExtendedFieldElementAbstractTest<T extends RealFieldElemen
         }
     }
 
+    //TODO - chtompki finish this up correctly
+    @Test
+    public void testLog1pMultiplyInverse() {
+        for (double x = -0.9; x < 0.9; x += 0.05) {
+            checkRelative(FastMath.log1pMultiplyInverse(x), build(x).log1pMultiplyInverse());
+        }
+    }
+
 //  TODO: add this test in 4.0, as it is not possible to do it in 3.2
 //  due to incompatibility of the return type in the Dfp class
 //    @Test

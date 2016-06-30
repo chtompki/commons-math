@@ -27,7 +27,7 @@ import org.apache.commons.math4.util.FastMath;
  *
  * @since 4.0
  */
-public class Log1pc implements UnivariateDifferentiableFunction {
+public class Log1pMultiplyInverse implements UnivariateDifferentiableFunction {
 
     /** {@inheritDoc} */
     @Override
@@ -40,6 +40,6 @@ public class Log1pc implements UnivariateDifferentiableFunction {
      */
     @Override
     public double value(double x) {
-        return FastMath.log1pc(x);
+        return FastMath.log1pMultiplyInverse(x);
     }
 }

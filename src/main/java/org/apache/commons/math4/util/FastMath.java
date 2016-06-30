@@ -1428,7 +1428,7 @@ public class FastMath {
      * @param x Number.
      * @return {@code log(1 + x)/x}.
      */
-    public static double log1pc(final double x) {
+    public static double log1pMultiplyInverse(final double x) {
         if (x == -1) {
             return Double.POSITIVE_INFINITY;
         } else if (x == Double.POSITIVE_INFINITY) {

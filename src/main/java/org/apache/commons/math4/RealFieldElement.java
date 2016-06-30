@@ -205,6 +205,11 @@ public interface RealFieldElement<T> extends FieldElement<T> {
      */
     T log1p();
 
+    /** Shifted natural logarithm divided by the input.
+     * @return logarithm of one plus the instance then divided by the instance
+     */
+    T log1pMultiplyInverse();
+
     /** Base 10 logarithm.
      * @return base 10 logarithm of the instance
      * @since 4.0

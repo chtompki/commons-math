@@ -31,8 +31,6 @@ import org.apache.commons.math4.exception.MathArithmeticException;
 import org.apache.commons.math4.random.MersenneTwister;
 import org.apache.commons.math4.random.RandomGenerator;
 import org.apache.commons.math4.random.Well1024a;
-import org.apache.commons.math4.util.FastMath;
-import org.apache.commons.math4.util.Precision;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -331,7 +329,7 @@ public class FastMathTest {
 
     @Test
     public void testLog1pc() {
-        System.out.println(FastMath.log1pc(0d));
+        System.out.println(FastMath.log1pMultiplyInverse(0d));
     }
 
     @Test
