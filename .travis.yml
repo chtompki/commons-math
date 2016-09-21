@@ -5,12 +5,15 @@ jdk:
   - openjdk7
   - oraclejdk8
 
-# only build master and the MATH_3_X branch
-branches:
-  only:
-    - develop
-    - master
-    - MATH_3_X
+## only build master and the MATH_3_X branch
+#branches:
+#  only:
+#    - develop
+#    - master
+#    - MATH_3_X
+install:
+  - mvn -X install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn -X -B test
 
 after_success:
   - mvn -X clean test jacoco:report coveralls:report
