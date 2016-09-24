@@ -12,8 +12,9 @@ jdk:
 #    - master
 #    - MATH_3_X
 install:
+  - export MAVEN_OPTS="-Xmx1028m -XX:MaxPermSize=128m"
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn -Xms256m -Xmx1028m -Dparallel=classes -Dsurefire.version=2.18.1 -DuseUnlimitedThreads=true -B test
+  - mvn -Dparallel=classes -Dsurefire.version=2.18.1 -DuseUnlimitedThreads=true -B test
 
 after_success:
   - mvn -X clean test jacoco:report coveralls:report
