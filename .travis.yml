@@ -5,6 +5,9 @@ jdk:
   - openjdk7
   - oraclejdk8
 
+env:
+  - MAVEN_OPTS="-Xmx1028m -XX:MaxPermSize=128m"
+
 ## only build master and the MATH_3_X branch
 #branches:
 #  only:
@@ -12,7 +15,6 @@ jdk:
 #    - master
 #    - MATH_3_X
 install:
-  - export MAVEN_OPTS="-Xmx1028m -XX:MaxPermSize=128m"
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn -Dparallel=classes -Dsurefire.version=2.18.1 -DuseUnlimitedThreads=true -B test
 
