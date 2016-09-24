@@ -6,7 +6,7 @@ jdk:
   - oraclejdk8
 
 env:
-  - MAVEN_OPTS="-Xmx1028m -XX:MaxPermSize=128m"
+  - MAVEN_OPTS="-Xmx2056m -XX:MaxPermSize=512m"
 
 ## only build master and the MATH_3_X branch
 #branches:
