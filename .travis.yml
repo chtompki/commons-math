@@ -13,7 +13,7 @@ jdk:
 #    - MATH_3_X
 install:
   - mvn -X install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn -Dparallel=classes -Dsurefire.version=2.18.1 -X -B test
+  - mvn -Dparallel=classes -Dsurefire.version=2.18.1 -DuseUnlimitedThreads=true -X -B test
 
 after_success:
   - mvn -X clean test jacoco:report coveralls:report
