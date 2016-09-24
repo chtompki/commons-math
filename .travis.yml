@@ -14,9 +14,9 @@ env:
 #    - develop
 #    - master
 #    - MATH_3_X
-install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn -DforkCount=20 -B test
+#install:
+#  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+#  - mvn -DforkCount=20 -B test
 
 after_success:
   - mvn -X clean test jacoco:report coveralls:report
