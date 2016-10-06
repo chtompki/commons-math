@@ -15,8 +15,7 @@ env:
 #    - master
 #    - MATH_3_X
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn -X -B test
+  - mvn -X -B package test
 
 #after_success:
 #  - mvn -X clean test jacoco:report coveralls:report
