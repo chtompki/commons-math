@@ -15,7 +15,7 @@ env:
 #    - master
 #    - MATH_3_X
 install:
-  - mvn -X -B package test
+  - mvn -Xmx1024m -XX:MaxPermSize=256m -X -B package test
 
 #after_success:
 #  - mvn -X clean test jacoco:report coveralls:report
