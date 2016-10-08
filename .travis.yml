@@ -5,8 +5,8 @@ jdk:
   - openjdk7
   - oraclejdk8
 
-env:
-  - MAVEN_OPTS="-Xmx2056m -XX:MaxPermSize=512m"
+#env:
+#  - MAVEN_OPTS="-Xmx2056m -XX:MaxPermSize=512m"
 
 ## only build master and the MATH_3_X branch
 #branches:
@@ -15,7 +15,8 @@ env:
 #    - master
 #    - MATH_3_X
 install:
-  - mvn -Xmx1024m -XX:MaxPermSize=256m -X -B package test
+  - export MAVEN_OPTS="-Xmx4g --XX:MaxPermSize=512m"
+  - mvn -X -B package test
 
 #after_success:
 #  - mvn -X clean test jacoco:report coveralls:report
