@@ -15,7 +15,7 @@ jdk:
 #    - master
 #    - MATH_3_X
 install:
-  - export MAVEN_OPTS="-Xmx6g -Xms1g" && mvn -X -B test || find . -type f -name 'hs_err*' -print | xargs cat
+  - export MAVEN_OPTS="-Xmx6g -Xms2g" && mvn -X -B test || find . -type f -name 'hs_err*' -print | xargs cat
 
 #after_success:
 #  - mvn -X clean test jacoco:report coveralls:report
