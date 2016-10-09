@@ -15,7 +15,7 @@ jdk:
 #    - master
 #    - MATH_3_X
 install:
-  - export MAVEN_OPTS="-Xmx4g --XX:MaxPermSize=1g" && mvn -X -B package test
+  - export MAVEN_OPTS="-Xmx6g --XX:MaxPermSize=2g" && mvn -X -B package test
 
 #after_success:
 #  - mvn -X clean test jacoco:report coveralls:report
