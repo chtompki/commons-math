@@ -17,5 +17,5 @@ jdk:
 install:
   - {export MAVEN_OPTS="-Xmx6g -Xms1g -XX:PermSize=2g -XX:MaxPermSize=2g -XX:ErrorFile=." && mvn -X -B package test} || {find . -type f -name 'hs_err*' -print | xargs cat}
 
-#after_success:
-#  - mvn -X clean test jacoco:report coveralls:report
+after_success:
+  - mvn -X clean test jacoco:report coveralls:report
